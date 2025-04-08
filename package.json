@@ -5,11 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "vinxi dev",
-    "build": "vinxi build --preset vercel",
+    "build": "vinxi build",
     "start": "vinxi start"
-  },
-  "engines": {
-    "node": "22"
   },
   "devDependencies": {
     "@types/bun": "latest",
