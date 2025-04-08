@@ -8,6 +8,9 @@
     "build": "vinxi build --preset vercel",
     "start": "vinxi start"
   },
+  "engines": {
+    "node": "22.x"
+  },
   "devDependencies": {
     "@types/bun": "latest",
     "@types/react": "^19.0.12",
