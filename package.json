@@ -9,7 +9,7 @@
     "start": "vinxi start"
   },
   "engines": {
-    "node": "22.x"
+    "node": "22"
   },
   "devDependencies": {
     "@types/bun": "latest",
