@@ -5,11 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "vinxi dev",
-    "build": "vinxi build --preset vercel",
+    "build": "vinxi build",
     "start": "vinxi start"
-  },
-  "engines": {
-    "node": "18.x"
   },
   "devDependencies": {
     "@types/bun": "latest",
@@ -23,7 +20,6 @@
   "peerDependencies": {
     "typescript": "^5.8.2"
   },
-
   
   "dependencies": {
     "@ark-ui/react": "^5.2.0",
