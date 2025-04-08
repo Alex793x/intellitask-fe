@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "vinxi dev",
-    "build": "vinxi build",
+    "build": "vinxi build --preset vercel",
     "start": "vinxi start"
   },
   "devDependencies": {
@@ -20,6 +20,8 @@
   "peerDependencies": {
     "typescript": "^5.8.2"
   },
+
+  
   "dependencies": {
     "@ark-ui/react": "^5.2.0",
     "@radix-ui/react-accordion": "^1.2.3",

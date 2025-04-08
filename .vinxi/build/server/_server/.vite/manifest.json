@@ -1,0 +1,65 @@
+{
+  "_client-DM3TFEX8.js": {
+    "file": "assets/client-DM3TFEX8.js",
+    "name": "client"
+  },
+  "_getRequestClient-CzduEbyq.js": {
+    "file": "assets/getRequestClient-CzduEbyq.js",
+    "name": "getRequestClient",
+    "imports": [
+      "_client-DM3TFEX8.js"
+    ]
+  },
+  "app/routes/__root.tsx?tsr-directive-use-server=": {
+    "file": "assets/__root-D8jfeMH7.js",
+    "name": "__root",
+    "src": "app/routes/__root.tsx?tsr-directive-use-server=",
+    "isDynamicEntry": true,
+    "imports": [
+      "_client-DM3TFEX8.js"
+    ]
+  },
+  "app/routes/_authed.tsx?tsr-directive-use-server=": {
+    "file": "assets/_authed-CUj4WOrr.js",
+    "name": "_authed",
+    "src": "app/routes/_authed.tsx?tsr-directive-use-server=",
+    "isDynamicEntry": true,
+    "imports": [
+      "_getRequestClient-CzduEbyq.js",
+      "_client-DM3TFEX8.js"
+    ]
+  },
+  "app/routes/_authed/_layout.tsx?tsr-split=component&tsr-directive-use-server=": {
+    "file": "assets/_layout-BruXYhkl.js",
+    "name": "_layout",
+    "src": "app/routes/_authed/_layout.tsx?tsr-split=component&tsr-directive-use-server=",
+    "isDynamicEntry": true,
+    "imports": [
+      "_getRequestClient-CzduEbyq.js",
+      "_client-DM3TFEX8.js"
+    ]
+  },
+  "app/routes/_authed/_layout/chat/$chatroomId.tsx?tsr-directive-use-server=": {
+    "file": "assets/_chatroomId-DV9np5Ye.js",
+    "name": "_chatroomId",
+    "src": "app/routes/_authed/_layout/chat/$chatroomId.tsx?tsr-directive-use-server=",
+    "isDynamicEntry": true,
+    "imports": [
+      "_getRequestClient-CzduEbyq.js",
+      "_client-DM3TFEX8.js"
+    ]
+  },
+  "virtual:$vinxi/handler/server": {
+    "file": "server.js",
+    "name": "server",
+    "src": "virtual:$vinxi/handler/server",
+    "isEntry": true,
+    "dynamicImports": [
+      "app/routes/__root.tsx?tsr-directive-use-server=",
+      "app/routes/_authed.tsx?tsr-directive-use-server=",
+      "app/routes/_authed/_layout/chat/$chatroomId.tsx?tsr-directive-use-server=",
+      "app/routes/_authed/_layout.tsx?tsr-split=component&tsr-directive-use-server=",
+      "app/routes/_authed/_layout.tsx?tsr-split=component&tsr-directive-use-server="
+    ]
+  }
+}
