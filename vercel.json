@@ -3,14 +3,7 @@
     "__nitro": {
       "runtime": "nodejs22.x"
     }
-  },
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-       "config": { "distDir": ".vercel/output/static" }
-    }
- ]
+  }
 } 
 
 
