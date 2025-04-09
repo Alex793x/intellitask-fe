@@ -15,29 +15,29 @@
       "node_modules/@shikijs/langs/dist/html.mjs"
     ]
   },
-  "_avatar-CwKHsdmf.js": {
-    "file": "assets/avatar-CwKHsdmf.js",
+  "_avatar-Cn4qL9pK.js": {
+    "file": "assets/avatar-Cn4qL9pK.js",
     "name": "avatar",
     "imports": [
-      "_client-uXE92eGo.js"
+      "_client-BPSRyLde.js"
     ]
   },
-  "_checkbox-CQF4pZr8.js": {
-    "file": "assets/checkbox-CQF4pZr8.js",
+  "_checkbox-OfirWtzs.js": {
+    "file": "assets/checkbox-OfirWtzs.js",
     "name": "checkbox",
     "imports": [
-      "_client-uXE92eGo.js"
+      "_client-BPSRyLde.js"
     ]
   },
-  "_circle-plus-CszMJv6_.js": {
-    "file": "assets/circle-plus-CszMJv6_.js",
+  "_circle-plus-RlrGXFFD.js": {
+    "file": "assets/circle-plus-RlrGXFFD.js",
     "name": "circle-plus",
     "imports": [
-      "_client-uXE92eGo.js"
+      "_client-BPSRyLde.js"
     ]
   },
-  "_client-uXE92eGo.js": {
-    "file": "assets/client-uXE92eGo.js",
+  "_client-BPSRyLde.js": {
+    "file": "assets/client-BPSRyLde.js",
     "name": "client",
     "dynamicImports": [
       "app/routes/verify-account.tsx?tsr-split=component",
@@ -57,56 +57,56 @@
       "assets/index-CXCNSesB.css"
     ]
   },
-  "_collapsible-D4geu0Rx.js": {
-    "file": "assets/collapsible-D4geu0Rx.js",
+  "_collapsible-DQqe-EYb.js": {
+    "file": "assets/collapsible-DQqe-EYb.js",
     "name": "collapsible",
     "imports": [
-      "_client-uXE92eGo.js",
-      "_dialog-CjqjsqEA.js",
-      "_avatar-CwKHsdmf.js",
-      "_plus-CIdEaKGf.js"
+      "_client-BPSRyLde.js",
+      "_dialog-DxwssxaR.js",
+      "_avatar-Cn4qL9pK.js",
+      "_plus-BqmAp2Kr.js"
     ]
   },
-  "_dialog-CjqjsqEA.js": {
-    "file": "assets/dialog-CjqjsqEA.js",
+  "_dialog-DxwssxaR.js": {
+    "file": "assets/dialog-DxwssxaR.js",
     "name": "dialog",
     "imports": [
-      "_client-uXE92eGo.js"
+      "_client-BPSRyLde.js"
     ]
   },
-  "_folder-open-Dc0QVy0Q.js": {
-    "file": "assets/folder-open-Dc0QVy0Q.js",
+  "_folder-open-Co9_zGSr.js": {
+    "file": "assets/folder-open-Co9_zGSr.js",
     "name": "folder-open",
     "imports": [
-      "_client-uXE92eGo.js"
+      "_client-BPSRyLde.js"
     ]
   },
-  "_lock-CI2y14lw.js": {
-    "file": "assets/lock-CI2y14lw.js",
+  "_lock-Dec7Hdx8.js": {
+    "file": "assets/lock-Dec7Hdx8.js",
     "name": "lock",
     "imports": [
-      "_client-uXE92eGo.js"
+      "_client-BPSRyLde.js"
     ]
   },
-  "_plus-CIdEaKGf.js": {
-    "file": "assets/plus-CIdEaKGf.js",
+  "_plus-BqmAp2Kr.js": {
+    "file": "assets/plus-BqmAp2Kr.js",
     "name": "plus",
     "imports": [
-      "_client-uXE92eGo.js"
+      "_client-BPSRyLde.js"
     ]
   },
-  "_trash-2-BOgCenH5.js": {
-    "file": "assets/trash-2-BOgCenH5.js",
+  "_trash-2-CHNEIoO0.js": {
+    "file": "assets/trash-2-CHNEIoO0.js",
     "name": "trash-2",
     "imports": [
-      "_client-uXE92eGo.js"
+      "_client-BPSRyLde.js"
     ]
   },
-  "_useSignOut-We4CO2GK.js": {
-    "file": "assets/useSignOut-We4CO2GK.js",
+  "_useSignOut-Dn_lWSMH.js": {
+    "file": "assets/useSignOut-Dn_lWSMH.js",
     "name": "useSignOut",
     "imports": [
-      "_client-uXE92eGo.js"
+      "_client-BPSRyLde.js"
     ]
   },
   "app/assets/img/IntelliOptima-Black-Text-Logo.webp": {
@@ -114,125 +114,125 @@
     "src": "app/assets/img/IntelliOptima-Black-Text-Logo.webp"
   },
   "app/routes/_authed/_layout.tsx?tsr-split=component": {
-    "file": "assets/_layout-BTfMjaYm.js",
+    "file": "assets/_layout-BNtGtOkr.js",
     "name": "_layout",
     "src": "app/routes/_authed/_layout.tsx?tsr-split=component",
     "isDynamicEntry": true,
     "imports": [
-      "_client-uXE92eGo.js",
-      "_avatar-CwKHsdmf.js",
-      "_folder-open-Dc0QVy0Q.js",
-      "_dialog-CjqjsqEA.js",
-      "_checkbox-CQF4pZr8.js",
-      "_plus-CIdEaKGf.js",
-      "_circle-plus-CszMJv6_.js",
-      "_useSignOut-We4CO2GK.js"
+      "_client-BPSRyLde.js",
+      "_avatar-Cn4qL9pK.js",
+      "_folder-open-Co9_zGSr.js",
+      "_dialog-DxwssxaR.js",
+      "_checkbox-OfirWtzs.js",
+      "_plus-BqmAp2Kr.js",
+      "_circle-plus-RlrGXFFD.js",
+      "_useSignOut-Dn_lWSMH.js"
     ],
     "assets": [
       "assets/IntelliOptima-Black-Text-Logo-z-6OsVSl.webp"
     ]
   },
   "app/routes/_authed/_layout/members/index.tsx?tsr-split=component": {
-    "file": "assets/index-DvfpYbLW.js",
+    "file": "assets/index-DX7r4oIb.js",
     "name": "index",
     "src": "app/routes/_authed/_layout/members/index.tsx?tsr-split=component",
     "isDynamicEntry": true,
     "imports": [
-      "_client-uXE92eGo.js",
-      "_dialog-CjqjsqEA.js",
-      "_checkbox-CQF4pZr8.js",
-      "_trash-2-BOgCenH5.js"
+      "_client-BPSRyLde.js",
+      "_dialog-DxwssxaR.js",
+      "_checkbox-OfirWtzs.js",
+      "_trash-2-CHNEIoO0.js"
     ]
   },
   "app/routes/_authed/_layout/organization-settings/index.tsx?tsr-split=component": {
-    "file": "assets/index-BjSLy00H.js",
+    "file": "assets/index-BnVAdkW4.js",
     "name": "index",
     "src": "app/routes/_authed/_layout/organization-settings/index.tsx?tsr-split=component",
     "isDynamicEntry": true,
     "imports": [
-      "_client-uXE92eGo.js",
-      "_dialog-CjqjsqEA.js"
+      "_client-BPSRyLde.js",
+      "_dialog-DxwssxaR.js"
     ]
   },
   "app/routes/_authed/_layout/organizations/index.tsx?tsr-split=component": {
-    "file": "assets/index-D6aY4kjR.js",
+    "file": "assets/index-eAPpMymL.js",
     "name": "index",
     "src": "app/routes/_authed/_layout/organizations/index.tsx?tsr-split=component",
     "isDynamicEntry": true,
     "imports": [
-      "_client-uXE92eGo.js",
-      "_plus-CIdEaKGf.js"
+      "_client-BPSRyLde.js",
+      "_plus-BqmAp2Kr.js"
     ]
   },
   "app/routes/_authed/_layout/project/$projectId.tsx?tsr-split=component": {
-    "file": "assets/_projectId-D0c3qdBK.js",
+    "file": "assets/_projectId-CYebxjGF.js",
     "name": "_projectId",
     "src": "app/routes/_authed/_layout/project/$projectId.tsx?tsr-split=component",
     "isDynamicEntry": true,
     "imports": [
-      "_client-uXE92eGo.js",
-      "_collapsible-D4geu0Rx.js",
-      "_dialog-CjqjsqEA.js",
-      "_checkbox-CQF4pZr8.js",
-      "_lock-CI2y14lw.js",
-      "_trash-2-BOgCenH5.js",
-      "_avatar-CwKHsdmf.js",
-      "_folder-open-Dc0QVy0Q.js",
-      "_plus-CIdEaKGf.js"
+      "_client-BPSRyLde.js",
+      "_collapsible-DQqe-EYb.js",
+      "_dialog-DxwssxaR.js",
+      "_checkbox-OfirWtzs.js",
+      "_lock-Dec7Hdx8.js",
+      "_trash-2-CHNEIoO0.js",
+      "_avatar-Cn4qL9pK.js",
+      "_folder-open-Co9_zGSr.js",
+      "_plus-BqmAp2Kr.js"
     ]
   },
   "app/routes/_authed/_layout/team-chat/index.tsx?tsr-split=component": {
-    "file": "assets/index-oAJkghjM.js",
+    "file": "assets/index-Bfm6cc_f.js",
     "name": "index",
     "src": "app/routes/_authed/_layout/team-chat/index.tsx?tsr-split=component",
     "isDynamicEntry": true,
     "imports": [
-      "_client-uXE92eGo.js"
+      "_client-BPSRyLde.js"
     ]
   },
   "app/routes/_authed/_layout/teamspace/$teamspaceId.tsx?tsr-split=component": {
-    "file": "assets/_teamspaceId-yyiLpCPG.js",
+    "file": "assets/_teamspaceId-CHx9YGWE.js",
     "name": "_teamspaceId",
     "src": "app/routes/_authed/_layout/teamspace/$teamspaceId.tsx?tsr-split=component",
     "isDynamicEntry": true,
     "imports": [
-      "_client-uXE92eGo.js",
-      "_collapsible-D4geu0Rx.js",
-      "_dialog-CjqjsqEA.js",
-      "_checkbox-CQF4pZr8.js",
-      "_lock-CI2y14lw.js",
-      "_avatar-CwKHsdmf.js",
-      "_circle-plus-CszMJv6_.js",
-      "_plus-CIdEaKGf.js"
+      "_client-BPSRyLde.js",
+      "_collapsible-DQqe-EYb.js",
+      "_dialog-DxwssxaR.js",
+      "_checkbox-OfirWtzs.js",
+      "_lock-Dec7Hdx8.js",
+      "_avatar-Cn4qL9pK.js",
+      "_circle-plus-RlrGXFFD.js",
+      "_plus-BqmAp2Kr.js"
     ]
   },
   "app/routes/accept-invitation/$invitationId.$invitationEmail.tsx?tsr-split=component": {
-    "file": "assets/_invitationId._invitationEmail-DVroklyt.js",
+    "file": "assets/_invitationId._invitationEmail-pBffmYiA.js",
     "name": "_invitationId._invitationEmail",
     "src": "app/routes/accept-invitation/$invitationId.$invitationEmail.tsx?tsr-split=component",
     "isDynamicEntry": true,
     "imports": [
-      "_client-uXE92eGo.js",
-      "_useSignOut-We4CO2GK.js"
+      "_client-BPSRyLde.js",
+      "_useSignOut-Dn_lWSMH.js"
     ]
   },
   "app/routes/index.tsx?tsr-split=component": {
-    "file": "assets/index-CPGz4CJp.js",
+    "file": "assets/index-CI4zWhnm.js",
     "name": "index",
     "src": "app/routes/index.tsx?tsr-split=component",
     "isDynamicEntry": true,
     "imports": [
-      "_client-uXE92eGo.js",
-      "_lock-CI2y14lw.js"
+      "_client-BPSRyLde.js",
+      "_lock-Dec7Hdx8.js"
     ]
   },
   "app/routes/verify-account.tsx?tsr-split=component": {
-    "file": "assets/verify-account-bTnlWbR-.js",
+    "file": "assets/verify-account-CGbBOOky.js",
     "name": "verify-account",
     "src": "app/routes/verify-account.tsx?tsr-split=component",
     "isDynamicEntry": true,
     "imports": [
-      "_client-uXE92eGo.js"
+      "_client-BPSRyLde.js"
     ]
   },
   "node_modules/@shikijs/langs/dist/abap.mjs": {
@@ -2269,12 +2269,12 @@
     "isDynamicEntry": true
   },
   "node_modules/shiki/dist/index.mjs": {
-    "file": "assets/index-C9Ln7lka.js",
+    "file": "assets/index-DkkDDR0O.js",
     "name": "index",
     "src": "node_modules/shiki/dist/index.mjs",
     "isDynamicEntry": true,
     "imports": [
-      "_client-uXE92eGo.js"
+      "_client-BPSRyLde.js"
     ],
     "dynamicImports": [
       "node_modules/@shikijs/langs/dist/abap.mjs",
@@ -2559,12 +2559,12 @@
     "isDynamicEntry": true
   },
   "virtual:$vinxi/handler/client": {
-    "file": "assets/client-pp14y6uM.js",
+    "file": "assets/client-BWkiPBHw.js",
     "name": "client",
     "src": "virtual:$vinxi/handler/client",
     "isEntry": true,
     "imports": [
-      "_client-uXE92eGo.js"
+      "_client-BPSRyLde.js"
     ]
   }
 }

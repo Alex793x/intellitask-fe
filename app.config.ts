@@ -17,7 +17,7 @@ declare module '@tanstack/react-start/config' {
 
 export default defineConfig({
   server: {
-    preset: 'vercel',
+    preset: 'netlify',
   },
   tsr: {
     appDirectory: 'app',
