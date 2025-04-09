@@ -5,7 +5,18 @@
     "module": "ESNext",
     "target": "ES2022",
     "moduleResolution": "bundler",
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "~/*": ["./app/*"],
+      "@/*": ["./server/*"],
+      "@/lib/*": ["./app/lib/*"],
+      "@/components/*": ["./app/components/*"],
+      "@/components/ui/*": ["./app/components/ui/*"],
+      "@/assets/*": ["./app/assets/*"],
+      "@/hooks/*": ["./app/hooks/*"],
+      "@/types/*": ["./types/*"],
+      "@/utils/*": ["./app/utils/*"]
+    },
   },
   "include": ["app.config.ts"]
 }
