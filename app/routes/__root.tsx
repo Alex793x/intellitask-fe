@@ -3,8 +3,8 @@ import { Outlet, createRootRoute, HeadContent, Scripts } from '@tanstack/react-r
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
 import { Provider as JotaiProvider } from 'jotai';
 
-import appCss from '@/assets/app.css';
-import indexCss from '@/assets/index.css';
+import appCss from '~/styles/app.css?url';
+import indexCss from '~/styles/index.css?url';
 import { DefaultCatchBoundary } from '../components/DefaultCatchBoundary';
 import { NotFound } from '../components/NotFound';
 import { getWebRequest } from '@tanstack/react-start/server';
@@ -44,6 +44,7 @@ const fetchBetterAuth = createServerFn({ method: 'GET' }).handler(async () => {
 
 export const Route = createRootRoute({
   head: () => ({
+    
     meta: [
       {
         charSet: 'utf-8',
@@ -57,6 +58,8 @@ export const Route = createRootRoute({
       },
     ],
     links: [
+      { rel: 'stylesheet', href: appCss },
+      { rel: 'stylesheet', href: indexCss },
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       {
         rel: 'preconnect',
@@ -67,8 +70,7 @@ export const Route = createRootRoute({
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap',
       },
-      { rel: 'stylesheet', href: appCss.toString(), as: 'style' },
-      { rel: 'stylesheet', href: indexCss.toString(), as: 'style' },
+
     ],
   }),
 
