@@ -2,8 +2,8 @@ import type { ReactNode } from 'react';
 import { Outlet, createRootRoute, HeadContent, Scripts } from '@tanstack/react-router';
 import { Provider as JotaiProvider } from 'jotai';
 
-import appCss from '~/styles/app.css?url';
-import indexCss from '~/styles/index.css?url';
+import appCss from '~/app.css?url';
+import indexCss from '~/index.css?url';
 import { DefaultCatchBoundary } from '../components/DefaultCatchBoundary';
 import { NotFound } from '../components/NotFound';
 import { getWebRequest } from '@tanstack/react-start/server';
