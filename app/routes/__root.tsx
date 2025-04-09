@@ -2,8 +2,7 @@ import type { ReactNode } from 'react';
 import { Outlet, createRootRoute, HeadContent, Scripts } from '@tanstack/react-router';
 import { Provider as JotaiProvider } from 'jotai';
 
-import appCss from '~/app.css?url';
-import indexCss from '~/index.css?url';
+
 import { DefaultCatchBoundary } from '../components/DefaultCatchBoundary';
 import { NotFound } from '../components/NotFound';
 import { getWebRequest } from '@tanstack/react-start/server';
@@ -11,6 +10,8 @@ import { createServerFn } from '@tanstack/react-start';
 import { Environment, Local } from '../lib/client';
 import { types } from '../lib/client';
 import { Toaster } from 'sonner';
+import appCss from '~/app.css?url';
+import indexCss from '~/index.css?url';
 
 const fetchBetterAuth = createServerFn({ method: 'GET' }).handler(async () => {
   const env = import.meta.env.DEV ? Local : Environment('staging');
