@@ -107,7 +107,7 @@ export namespace auth {
     }
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/organizations/has-active`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/organizations/has-active`)
             return await resp.json() as {
     data: {
         hasActiveOrganization: boolean
@@ -119,7 +119,7 @@ export namespace auth {
     data: types.InvitationDto[]
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/organizations/invitations`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/organizations/invitations`)
             return await resp.json() as {
     data: types.InvitationDto[]
 }
@@ -129,7 +129,7 @@ export namespace auth {
     data: types.Organization[]
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/organizations/attended-by-user`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/organizations/attended-by-user`)
             return await resp.json() as {
     data: types.Organization[]
 }
@@ -159,7 +159,7 @@ export namespace chatrooms {
     data: types.TeamspaceMember
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("POST", `/teamspaces/${encodeURIComponent(teamspaceId)}/members`, JSON.stringify(params))
+            const resp = await this.baseClient.callTypedAPI("POST", `/api/teamspaces/${encodeURIComponent(teamspaceId)}/members`, JSON.stringify(params))
             return await resp.json() as {
     data: types.TeamspaceMember
 }
@@ -168,13 +168,13 @@ export namespace chatrooms {
         public async changeProjectMemberStatus(id: string, memberId: string, params: {
     kickStatus: boolean
 }): Promise<void> {
-            await this.baseClient.callTypedAPI("PATCH", `/projects/${encodeURIComponent(id)}/kick-member/${encodeURIComponent(memberId)}`, JSON.stringify(params))
+            await this.baseClient.callTypedAPI("PATCH", `/api/projects/${encodeURIComponent(id)}/kick-member/${encodeURIComponent(memberId)}`, JSON.stringify(params))
         }
 
         public async changeTeamspaceMemberStatus(id: string, memberId: string, params: {
     kickStatus: boolean
 }): Promise<void> {
-            await this.baseClient.callTypedAPI("PATCH", `/teamspaces/${encodeURIComponent(id)}/kick-member/${encodeURIComponent(memberId)}`, JSON.stringify(params))
+            await this.baseClient.callTypedAPI("PATCH", `/api/teamspaces/${encodeURIComponent(id)}/kick-member/${encodeURIComponent(memberId)}`, JSON.stringify(params))
         }
 
         /**
@@ -184,7 +184,7 @@ export namespace chatrooms {
     data: types.ChatroomDto
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("POST", `/chatrooms`, JSON.stringify(params))
+            const resp = await this.baseClient.callTypedAPI("POST", `/api/chatrooms`, JSON.stringify(params))
             return await resp.json() as {
     data: types.ChatroomDto
 }
@@ -197,7 +197,7 @@ export namespace chatrooms {
     data: types.ProjectDto
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("POST", `/projects`, JSON.stringify(params))
+            const resp = await this.baseClient.callTypedAPI("POST", `/api/projects`, JSON.stringify(params))
             return await resp.json() as {
     data: types.ProjectDto
 }
@@ -210,7 +210,7 @@ export namespace chatrooms {
     data: types.TeamspaceDto
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("POST", `/teamspaces`, JSON.stringify(params))
+            const resp = await this.baseClient.callTypedAPI("POST", `/api/teamspaces`, JSON.stringify(params))
             return await resp.json() as {
     data: types.TeamspaceDto
 }
@@ -220,7 +220,7 @@ export namespace chatrooms {
          * This API endpoint is used to delete a chatroom.
          */
         public async deleteChatroom(id: string): Promise<void> {
-            await this.baseClient.callTypedAPI("DELETE", `/chatrooms/${encodeURIComponent(id)}`)
+            await this.baseClient.callTypedAPI("DELETE", `/api/chatrooms/${encodeURIComponent(id)}`)
         }
 
         public async deleteOneChatroomFile(params: {
@@ -280,14 +280,14 @@ export namespace chatrooms {
          * This API endpoint is used to delete a project.
          */
         public async deleteProject(id: string): Promise<void> {
-            await this.baseClient.callTypedAPI("DELETE", `/projects/${encodeURIComponent(id)}`)
+            await this.baseClient.callTypedAPI("DELETE", `/api/projects/${encodeURIComponent(id)}`)
         }
 
         /**
          * This API endpoint is used to delete a teamspace.
          */
         public async deleteTeamspace(id: string): Promise<void> {
-            await this.baseClient.callTypedAPI("DELETE", `/teamspaces/${encodeURIComponent(id)}`)
+            await this.baseClient.callTypedAPI("DELETE", `/api/teamspaces/${encodeURIComponent(id)}`)
         }
 
         /**
@@ -297,7 +297,7 @@ export namespace chatrooms {
     data: types.ChatroomDto
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/chatrooms/${encodeURIComponent(id)}`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/chatrooms/${encodeURIComponent(id)}`)
             return await resp.json() as {
     data: types.ChatroomDto
 }
@@ -310,7 +310,7 @@ export namespace chatrooms {
     data: types.ChatroomDto[]
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/chatrooms/participating`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/chatrooms/participating`)
             return await resp.json() as {
     data: types.ChatroomDto[]
 }
@@ -320,7 +320,7 @@ export namespace chatrooms {
     data: types.TeamspaceDto[]
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/teamspaces/participating`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/teamspaces/participating`)
             return await resp.json() as {
     data: types.TeamspaceDto[]
 }
@@ -333,7 +333,7 @@ export namespace chatrooms {
     data: types.ProjectDto
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/projects/${encodeURIComponent(id)}`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/projects/${encodeURIComponent(id)}`)
             return await resp.json() as {
     data: types.ProjectDto
 }
@@ -346,7 +346,7 @@ export namespace chatrooms {
     data: types.ProjectDto[]
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/teamspaces/${encodeURIComponent(teamspaceId)}/projects`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/teamspaces/${encodeURIComponent(teamspaceId)}/projects`)
             return await resp.json() as {
     data: types.ProjectDto[]
 }
@@ -359,7 +359,7 @@ export namespace chatrooms {
     data: types.TeamspaceDto
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/teamspaces/${encodeURIComponent(id)}`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/teamspaces/${encodeURIComponent(id)}`)
             return await resp.json() as {
     data: types.TeamspaceDto
 }
@@ -372,7 +372,7 @@ export namespace chatrooms {
     data: types.TeamspaceMember[]
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/teamspaces/${encodeURIComponent(teamspaceId)}/members`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/teamspaces/${encodeURIComponent(teamspaceId)}/members`)
             return await resp.json() as {
     data: types.TeamspaceMember[]
 }
@@ -385,7 +385,7 @@ export namespace chatrooms {
     data: types.TeamspaceDto[]
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/teamspaces`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/teamspaces`)
             return await resp.json() as {
     data: types.TeamspaceDto[]
 }
@@ -398,7 +398,7 @@ export namespace chatrooms {
     data: types.ProjectDto[]
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/user/projects`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/user/projects`)
             return await resp.json() as {
     data: types.ProjectDto[]
 }
@@ -408,7 +408,7 @@ export namespace chatrooms {
          * This API endpoint is used to remove a member from a teamspace.
          */
         public async removeTeamspaceMember(id: string): Promise<void> {
-            await this.baseClient.callTypedAPI("DELETE", `/teamspaces/members/${encodeURIComponent(id)}`)
+            await this.baseClient.callTypedAPI("DELETE", `/api/teamspaces/members/${encodeURIComponent(id)}`)
         }
 
         /**
@@ -423,7 +423,7 @@ export namespace chatrooms {
     chatroomMembers: types.ChatroomMemberRequest[]
     teamIds: string[]
 }): Promise<void> {
-            await this.baseClient.callTypedAPI("PATCH", `/chatrooms/${encodeURIComponent(id)}`, JSON.stringify(params))
+            await this.baseClient.callTypedAPI("PATCH", `/api/chatrooms/${encodeURIComponent(id)}`, JSON.stringify(params))
         }
 
         /**
@@ -441,7 +441,7 @@ export namespace chatrooms {
     data: types.ProjectDto
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("PATCH", `/projects/${encodeURIComponent(id)}`, JSON.stringify(params))
+            const resp = await this.baseClient.callTypedAPI("PATCH", `/api/projects/${encodeURIComponent(id)}`, JSON.stringify(params))
             return await resp.json() as {
     data: types.ProjectDto
 }
@@ -457,7 +457,7 @@ export namespace chatrooms {
     creatorId: string
     members: types.TeamspaceMemberRequest[]
 }): Promise<void> {
-            await this.baseClient.callTypedAPI("PATCH", `/teamspaces/${encodeURIComponent(id)}`, JSON.stringify(params))
+            await this.baseClient.callTypedAPI("PATCH", `/api/teamspaces/${encodeURIComponent(id)}`, JSON.stringify(params))
         }
 
         /**
@@ -470,7 +470,7 @@ export namespace chatrooms {
     role?: types.MemberRole
     invitedByUserId?: string
 }): Promise<void> {
-            await this.baseClient.callTypedAPI("PATCH", `/teamspaces/members/${encodeURIComponent(id)}`, JSON.stringify(params))
+            await this.baseClient.callTypedAPI("PATCH", `/api/teamspaces/members/${encodeURIComponent(id)}`, JSON.stringify(params))
         }
     }
 }
@@ -491,21 +491,21 @@ export namespace chats {
                 userId:     params.userId,
             })
 
-            return await this.baseClient.createStreamInOut(`/chat`, {query})
+            return await this.baseClient.createStreamInOut(`/api/chat`, {query})
         }
 
         public async createChatMessageReactions(params: types.ReactionRequest): Promise<{
     data: types.Reaction
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("POST", `/chatmessage-reactions`, JSON.stringify(params))
+            const resp = await this.baseClient.callTypedAPI("POST", `/api/chatmessage-reactions`, JSON.stringify(params))
             return await resp.json() as {
     data: types.Reaction
 }
         }
 
         public async deleteChatMessageReaction(id: string): Promise<void> {
-            await this.baseClient.callTypedAPI("DELETE", `/chatmessage-reactions/${encodeURIComponent(id)}`)
+            await this.baseClient.callTypedAPI("DELETE", `/api/chatmessage-reactions/${encodeURIComponent(id)}`)
         }
 
         public async updateChatMessageReaction(id: string, params: {
@@ -529,7 +529,7 @@ export namespace chats {
      */
     receiverIds: string[]
 }): Promise<void> {
-            await this.baseClient.callTypedAPI("PATCH", `/chatmessage-reactions/${encodeURIComponent(id)}`, JSON.stringify(params))
+            await this.baseClient.callTypedAPI("PATCH", `/api/chatmessage-reactions/${encodeURIComponent(id)}`, JSON.stringify(params))
         }
     }
 }
@@ -549,7 +549,7 @@ export namespace eventStreamer {
     initializerId: string
     organizationId: string
 }>> {
-            return await this.baseClient.createStreamIn(`/events`)
+            return await this.baseClient.createStreamIn(`/api/events`)
         }
 
         public async stats(userId: string): Promise<void> {
@@ -595,7 +595,7 @@ export namespace fileManagement {
             })
 
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/files`, undefined, {query})
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/files`, undefined, {query})
             return await resp.json() as {
     data: types.FileDto[]
 }
@@ -606,7 +606,7 @@ export namespace fileManagement {
          * This is a more modern approach where the file and metadata are sent in a multipart/form-data request.
          */
         public async uploadFilesWithMetadata(method: "POST", body?: BodyInit, options?: CallParameters): Promise<globalThis.Response> {
-            return this.baseClient.callAPI(method, `/upload-with-metadata`, body, options)
+            return this.baseClient.callAPI(method, `/api/upload-with-metadata`, body, options)
         }
     }
 }
@@ -620,11 +620,15 @@ export namespace fuck {
             this.baseClient = baseClient
         }
 
+        public async chatAgent(method: "POST", body?: BodyInit, options?: CallParameters): Promise<globalThis.Response> {
+            return this.baseClient.callAPI(method, `/api/agents/chat`, body, options)
+        }
+
         public async createAgent(params: types.AgentRequest): Promise<{
     data: types.AgentWithRelationsDTO
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("POST", `/agents`, JSON.stringify(params))
+            const resp = await this.baseClient.callTypedAPI("POST", `/api/agents`, JSON.stringify(params))
             return await resp.json() as {
     data: types.AgentWithRelationsDTO
 }
@@ -634,7 +638,7 @@ export namespace fuck {
     data: types.ConfigProfile
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("POST", `/config-profile`, JSON.stringify(params))
+            const resp = await this.baseClient.callTypedAPI("POST", `/api/config-profile`, JSON.stringify(params))
             return await resp.json() as {
     data: types.ConfigProfile
 }
@@ -644,7 +648,7 @@ export namespace fuck {
     data: types.InstructionSet
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("POST", `/instruction-set`, JSON.stringify(params))
+            const resp = await this.baseClient.callTypedAPI("POST", `/api/instruction-set`, JSON.stringify(params))
             return await resp.json() as {
     data: types.InstructionSet
 }
@@ -654,7 +658,7 @@ export namespace fuck {
     data: types.Model
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("POST", `/model`, JSON.stringify(params))
+            const resp = await this.baseClient.callTypedAPI("POST", `/api/model`, JSON.stringify(params))
             return await resp.json() as {
     data: types.Model
 }
@@ -664,7 +668,7 @@ export namespace fuck {
     data: types.VoiceProfile
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("POST", `/voice-profile`, JSON.stringify(params))
+            const resp = await this.baseClient.callTypedAPI("POST", `/api/voice-profile`, JSON.stringify(params))
             return await resp.json() as {
     data: types.VoiceProfile
 }
@@ -678,23 +682,23 @@ export namespace fuck {
                 id: params.id,
             })
 
-            await this.baseClient.callTypedAPI("DELETE", `/agents:id`, undefined, {query})
+            await this.baseClient.callTypedAPI("DELETE", `/api/agents:id`, undefined, {query})
         }
 
         public async deleteConfigProfile(id: string): Promise<void> {
-            await this.baseClient.callTypedAPI("DELETE", `/config-profile/${encodeURIComponent(id)}`)
+            await this.baseClient.callTypedAPI("DELETE", `/api/config-profile/${encodeURIComponent(id)}`)
         }
 
         public async deleteInstructionSet(id: string): Promise<void> {
-            await this.baseClient.callTypedAPI("DELETE", `/instruction-set/${encodeURIComponent(id)}`)
+            await this.baseClient.callTypedAPI("DELETE", `/api/instruction-set/${encodeURIComponent(id)}`)
         }
 
         public async deleteModel(id: string): Promise<void> {
-            await this.baseClient.callTypedAPI("DELETE", `/model/${encodeURIComponent(id)}`)
+            await this.baseClient.callTypedAPI("DELETE", `/api/model/${encodeURIComponent(id)}`)
         }
 
         public async deleteVoiceProfile(id: string): Promise<void> {
-            await this.baseClient.callTypedAPI("DELETE", `/voice-profile/${encodeURIComponent(id)}`)
+            await this.baseClient.callTypedAPI("DELETE", `/api/voice-profile/${encodeURIComponent(id)}`)
         }
 
         public async getAgent(params: {
@@ -708,7 +712,7 @@ export namespace fuck {
             })
 
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/agents:id`, undefined, {query})
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/agents:id`, undefined, {query})
             return await resp.json() as {
     data: types.AgentWithRelationsDTO
 }
@@ -718,7 +722,7 @@ export namespace fuck {
     data: types.ConfigProfile
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/config-profile/${encodeURIComponent(id)}`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/config-profile/${encodeURIComponent(id)}`)
             return await resp.json() as {
     data: types.ConfigProfile
 }
@@ -728,7 +732,7 @@ export namespace fuck {
     data: types.InstructionSet
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/instruction-set/${encodeURIComponent(id)}`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/instruction-set/${encodeURIComponent(id)}`)
             return await resp.json() as {
     data: types.InstructionSet
 }
@@ -738,7 +742,7 @@ export namespace fuck {
     data: types.Model
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/model/${encodeURIComponent(id)}`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/model/${encodeURIComponent(id)}`)
             return await resp.json() as {
     data: types.Model
 }
@@ -748,7 +752,7 @@ export namespace fuck {
     data: types.Model[]
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/models`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/models`)
             return await resp.json() as {
     data: types.Model[]
 }
@@ -758,7 +762,7 @@ export namespace fuck {
     data: types.Model[]
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/models/provider/${encodeURIComponent(provider)}`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/models/provider/${encodeURIComponent(provider)}`)
             return await resp.json() as {
     data: types.Model[]
 }
@@ -768,7 +772,7 @@ export namespace fuck {
     data: types.AgentWithRelationsDTO[]
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/agents`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/agents`)
             return await resp.json() as {
     data: types.AgentWithRelationsDTO[]
 }
@@ -778,7 +782,7 @@ export namespace fuck {
     data: types.ConfigProfile[]
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/config-profiles`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/config-profiles`)
             return await resp.json() as {
     data: types.ConfigProfile[]
 }
@@ -788,7 +792,7 @@ export namespace fuck {
     data: types.InstructionSet[]
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/instruction-sets`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/instruction-sets`)
             return await resp.json() as {
     data: types.InstructionSet[]
 }
@@ -798,7 +802,7 @@ export namespace fuck {
     data: types.VoiceProfile
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/voice-profile/${encodeURIComponent(id)}`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/voice-profile/${encodeURIComponent(id)}`)
             return await resp.json() as {
     data: types.VoiceProfile
 }
@@ -808,7 +812,7 @@ export namespace fuck {
     data: types.VoiceProfile[]
 }> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/voice-profiles`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/voice-profiles`)
             return await resp.json() as {
     data: types.VoiceProfile[]
 }
@@ -872,7 +876,7 @@ export namespace fuck {
 
     id: string
 }): Promise<void> {
-            await this.baseClient.callTypedAPI("PATCH", `/agents:id`, JSON.stringify(params))
+            await this.baseClient.callTypedAPI("PATCH", `/api/agents:id`, JSON.stringify(params))
         }
 
         public async updateConfigProfile(id: string, params: {
@@ -887,7 +891,7 @@ export namespace fuck {
     isPublic: boolean
     isActive?: boolean
 }): Promise<void> {
-            await this.baseClient.callTypedAPI("PATCH", `/config-profile/${encodeURIComponent(id)}`, JSON.stringify(params))
+            await this.baseClient.callTypedAPI("PATCH", `/api/config-profile/${encodeURIComponent(id)}`, JSON.stringify(params))
         }
 
         public async updateInstructionSet(id: string, params: {
@@ -897,7 +901,7 @@ export namespace fuck {
     isPublic: boolean
     isActive?: boolean
 }): Promise<void> {
-            await this.baseClient.callTypedAPI("PATCH", `/instruction-set/${encodeURIComponent(id)}`, JSON.stringify(params))
+            await this.baseClient.callTypedAPI("PATCH", `/api/instruction-set/${encodeURIComponent(id)}`, JSON.stringify(params))
         }
 
         public async updateModel(id: string, params: {
@@ -908,7 +912,7 @@ export namespace fuck {
     maxTokens?: number
     isActive?: boolean
 }): Promise<void> {
-            await this.baseClient.callTypedAPI("PATCH", `/model/${encodeURIComponent(id)}`, JSON.stringify(params))
+            await this.baseClient.callTypedAPI("PATCH", `/api/model/${encodeURIComponent(id)}`, JSON.stringify(params))
         }
 
         public async updateVoiceProfile(id: string, params: {
@@ -918,7 +922,7 @@ export namespace fuck {
     settings?: { [key: string]: any }
     isActive?: boolean
 }): Promise<void> {
-            await this.baseClient.callTypedAPI("PATCH", `/voice-profile/${encodeURIComponent(id)}`, JSON.stringify(params))
+            await this.baseClient.callTypedAPI("PATCH", `/api/voice-profile/${encodeURIComponent(id)}`, JSON.stringify(params))
         }
     }
 }
@@ -1028,7 +1032,7 @@ export namespace openai {
          */
         public async getCommunicationCoach(): Promise<AgentEphemeral> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/communication-coach`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/communication-coach`)
             return await resp.json() as AgentEphemeral
         }
 
@@ -1037,7 +1041,7 @@ export namespace openai {
          */
         public async getDataAnalyst(): Promise<AgentEphemeral> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/data-analyst`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/data-analyst`)
             return await resp.json() as AgentEphemeral
         }
 
@@ -1046,7 +1050,7 @@ export namespace openai {
          */
         public async getFinancialAdvisor(): Promise<AgentEphemeral> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/financial-advisor`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/financial-advisor`)
             return await resp.json() as AgentEphemeral
         }
 
@@ -1055,7 +1059,7 @@ export namespace openai {
          */
         public async getHRConsultant(): Promise<AgentEphemeral> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/hr-consultant`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/hr-consultant`)
             return await resp.json() as AgentEphemeral
         }
 
@@ -1064,7 +1068,7 @@ export namespace openai {
          */
         public async getInnovationConsultant(): Promise<AgentEphemeral> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/innovation-consultant`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/innovation-consultant`)
             return await resp.json() as AgentEphemeral
         }
 
@@ -1073,7 +1077,7 @@ export namespace openai {
          */
         public async getLegalAdvisor(): Promise<AgentEphemeral> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/legal-advisor`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/legal-advisor`)
             return await resp.json() as AgentEphemeral
         }
 
@@ -1082,7 +1086,7 @@ export namespace openai {
          */
         public async getMarketingAdvisor(): Promise<AgentEphemeral> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/marketing-advisor`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/marketing-advisor`)
             return await resp.json() as AgentEphemeral
         }
 
@@ -1091,7 +1095,7 @@ export namespace openai {
          */
         public async getProductivityCoach(): Promise<AgentEphemeral> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/productivity-coach`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/productivity-coach`)
             return await resp.json() as AgentEphemeral
         }
 
@@ -1100,7 +1104,7 @@ export namespace openai {
          */
         public async getProjectManager(): Promise<AgentEphemeral> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/project-manager`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/project-manager`)
             return await resp.json() as AgentEphemeral
         }
 
@@ -1109,7 +1113,7 @@ export namespace openai {
          */
         public async getSupervisor(): Promise<AgentEphemeral> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/supervisor`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/supervisor`)
             return await resp.json() as AgentEphemeral
         }
 
@@ -1118,7 +1122,7 @@ export namespace openai {
          */
         public async getTechAdvisor(): Promise<AgentEphemeral> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/tech-advisor`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/tech-advisor`)
             return await resp.json() as AgentEphemeral
         }
 
@@ -1127,7 +1131,7 @@ export namespace openai {
          */
         public async getWellnessCoach(): Promise<AgentEphemeral> {
             // Now make the actual call to the API
-            const resp = await this.baseClient.callTypedAPI("GET", `/wellness-coach`)
+            const resp = await this.baseClient.callTypedAPI("GET", `/api/wellness-coach`)
             return await resp.json() as AgentEphemeral
         }
 
@@ -1136,7 +1140,7 @@ export namespace openai {
          * It processes messages sent by the client and returns a smoothly streamed response.
          */
         public async openaiStream(method: "POST", body?: BodyInit, options?: CallParameters): Promise<globalThis.Response> {
-            return this.baseClient.callAPI(method, `/stream-chat`, body, options)
+            return this.baseClient.callAPI(method, `/api/stream-chat`, body, options)
         }
     }
 }
