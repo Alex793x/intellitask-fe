@@ -5,7 +5,6 @@ import tailwindcss from '@tailwindcss/vite';
 import type {InlineConfig } from 'vite'
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { O } from './dist/_build/assets/client-FwIbwupS';
 
 // Create dirname equivalent for ES modules
 const __filename = fileURLToPath(import.meta.url);
