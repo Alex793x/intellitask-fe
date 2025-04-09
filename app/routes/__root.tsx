@@ -3,8 +3,8 @@ import { Outlet, createRootRoute, HeadContent, Scripts } from '@tanstack/react-r
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
 import { Provider as JotaiProvider } from 'jotai';
 
-import appCss from '../assets/styles/app.css';
-import indexCss from '../assets/styles/index.css';
+import appCss from '../assets/app.css';
+import indexCss from '../assets/index.css';
 import { DefaultCatchBoundary } from '../components/DefaultCatchBoundary';
 import { NotFound } from '../components/NotFound';
 import { getWebRequest } from '@tanstack/react-start/server';
