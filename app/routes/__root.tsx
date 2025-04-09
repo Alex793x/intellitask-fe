@@ -43,7 +43,6 @@ const fetchBetterAuth = createServerFn({ method: 'GET' }).handler(async () => {
 
 export const Route = createRootRoute({
   head: () => ({
-    
     meta: [
       {
         charSet: 'utf-8',
@@ -57,8 +56,6 @@ export const Route = createRootRoute({
       },
     ],
     links: [
-      { rel: 'stylesheet', href: appCss },
-      { rel: 'stylesheet', href: indexCss },
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       {
         rel: 'preconnect',
@@ -69,7 +66,8 @@ export const Route = createRootRoute({
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap',
       },
-
+      { rel: 'stylesheet', href: appCss },
+      { rel: 'stylesheet', href: indexCss },
     ],
   }),
 
