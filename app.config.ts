@@ -18,6 +18,13 @@ declare module '@tanstack/react-start/config' {
 
 const vite: InlineConfig = {
   server: {
+    cors: {
+      origin: ['localhost', '127.0.0.1', 'encore.test', 'staging-intellitask-yrr2.encr.app'],
+      credentials: true,
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+      allowedHeaders: ['*'],
+      exposedHeaders: ['*'],
+    },
     allowedHosts: ['localhost', '127.0.0.1', 'encore.test', 'staging-intellitask-yrr2.encr.app'],
   },
   plugins: [
@@ -35,6 +42,7 @@ const vite: InlineConfig = {
     include: ['stream', 'stream/web', 'path', 'fs', 'async_hooks'], // Include Node.js built-in modules
   },
   build: {
+    sourcemap: true,
     assetsDir: 'dist/assets',
     rollupOptions: {
       external: ['node:stream', 'node:stream/web', 'node:path', 'node:fs', 'node:async_hooks'], // Mark Node.js built-in modules as external
