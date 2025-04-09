@@ -36,7 +36,6 @@ export default defineConfig({
       include: ['stream', 'stream/web', 'path', 'fs', 'async_hooks'], // Include Node.js built-in modules
     },
     build: {
-      sourcemap: true,
       rollupOptions: {
         external: ['node:stream', 'node:stream/web', 'node:path', 'node:fs', 'node:async_hooks'], // Mark Node.js built-in modules as external
       },
