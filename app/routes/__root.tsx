@@ -10,8 +10,7 @@ import { createServerFn } from '@tanstack/react-start';
 import { Environment, Local } from '../lib/client';
 import { types } from '../lib/client';
 import { Toaster } from 'sonner';
-import appCss from '~/app.css?url';
-import indexCss from '~/index.css?url';
+import appCss from '~/styles/app.css?url';
 
 const fetchBetterAuth = createServerFn({ method: 'GET' }).handler(async () => {
   const env = import.meta.env.DEV ? Local : Environment('staging');
@@ -67,7 +66,6 @@ export const Route = createRootRoute({
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap',
       },
-      { rel: 'stylesheet', href: indexCss },
       { rel: 'stylesheet', href: appCss },
     ],
   }),
