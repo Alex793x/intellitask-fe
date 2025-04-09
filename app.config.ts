@@ -19,13 +19,13 @@ declare module '@tanstack/react-start/config' {
 const vite: InlineConfig = {
   server: {
     cors: {
-      origin: ['localhost', '127.0.0.1', 'encore.test', 'https://staging-intellitask-yrr2.encr.app'],
+      origin: ['localhost', '127.0.0.1', 'encore.test', 'https://staging-intellitask-yrr2.encr.app', 'intellitask.io'],
       credentials: true,
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
       allowedHeaders: ['*'],
       exposedHeaders: ['*'],
     },
-    allowedHosts: ['localhost', '127.0.0.1', 'encore.test', 'https://staging-intellitask-yrr2.encr.app'],
+    allowedHosts: ['localhost', '127.0.0.1', 'encore.test', 'https://staging-intellitask-yrr2.encr.app', 'intellitask.io'],
   },
   plugins: [
     tailwindcss(),
