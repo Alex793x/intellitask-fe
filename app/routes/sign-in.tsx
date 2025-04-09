@@ -43,9 +43,10 @@ function SignIn() {
   }, []);
 
   const handleGoogleSignin = async () => {
+    const googleEnvRedirect = import.meta.env.DEV ? 'http://localhost:3000/chat' : 'https://intellitask.io/chat'
     await signIn.social({
       provider: 'google',
-      callbackURL: 'http://localhost:3000/chat',
+      callbackURL: googleEnvRedirect,
     });
   }
 
