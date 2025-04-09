@@ -3,8 +3,8 @@ import { Outlet, createRootRoute, HeadContent, Scripts } from '@tanstack/react-r
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
 import { Provider as JotaiProvider } from 'jotai';
 
-import appCss from '../assets/styles/app.css?url';
-import indexCss from '../assets/styles/index.css?url';
+import appCss from '../assets/styles/app.css';
+import indexCss from '../assets/styles/index.css';
 import { DefaultCatchBoundary } from '../components/DefaultCatchBoundary';
 import { NotFound } from '../components/NotFound';
 import { getWebRequest } from '@tanstack/react-start/server';
@@ -67,8 +67,8 @@ export const Route = createRootRoute({
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap',
       },
-      { rel: 'stylesheet', href: appCss },
-      { rel: 'stylesheet', href: indexCss },
+      { rel: 'stylesheet', href: appCss.toString(), as: 'style' },
+      { rel: 'stylesheet', href: indexCss.toString(), as: 'style' },
     ],
   }),
 
