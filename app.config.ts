@@ -43,6 +43,9 @@ const vite: InlineConfig = {
 }
 
 export default defineConfig({
+  server: {
+    preset: 'netlify',
+  },
   tsr: {
     appDirectory: 'app',
   },
