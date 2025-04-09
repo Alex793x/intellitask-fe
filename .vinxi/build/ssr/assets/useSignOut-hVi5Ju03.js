@@ -1,0 +1,1 @@
+import{useRouter as o}from"@tanstack/react-router";import{a7 as r}from"./ssr-BNzkPgCO.js";const u=()=>{const t=o();return async()=>{await r(),t.navigate({to:"/sign-in",reloadDocument:!0})}};export{u};
