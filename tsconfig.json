@@ -1,12 +1,17 @@
 {
+  "include": ["**/*.ts", "**/*.tsx"],
   "compilerOptions": {
     // Enable latest features
+    "esModuleInterop": true,
     "lib": ["ESNext", "DOM"],
+    "isolatedModules": true,
+    "resolveJsonModule": true,
     "module": "ESNext",
     "target": "ES2022",
     "moduleDetection": "force",
     "jsx": "react-jsx",
     "allowJs": true,
+    "baseUrl": ".",
 
     "paths": {
       "~/*": ["./app/*"],
