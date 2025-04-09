@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "vinxi dev",
-    "build": "vinxi build",
+    "build": "vinxi build --preset netlify",
     "start": "vinxi start"
   },
   "devDependencies": {
