@@ -18,7 +18,7 @@ import { z } from 'zod';
 import { marked } from 'marked';
 import rr from 'react-markdown';
 import sr from 'remark-gfm';
-import * as We from '@radix-ui/react-hover-card';
+import * as qe$1 from '@radix-ui/react-hover-card';
 import { encode } from 'qss';
 import * as a from '@radix-ui/react-dialog';
 import * as fe$1 from '@radix-ui/react-tooltip';
@@ -448,9 +448,9 @@ const xn = ({ children: t, url: n, className: r, width: a = 200, height: h = 125
     const c = w.target.getBoundingClientRect(), _ = (w.clientX - c.left - c.width / 2) / 2;
     I.set(_);
   };
-  return jsxs(Fragment, { children: [N ? jsx("div", { className: "hidden", children: jsx("img", { src: m, width: a, height: h, alt: "hidden image" }) }) : null, jsxs(We.Root, { openDelay: 50, closeDelay: 100, onOpenChange: (w) => {
+  return jsxs(Fragment, { children: [N ? jsx("div", { className: "hidden", children: jsx("img", { src: m, width: a, height: h, alt: "hidden image" }) }) : null, jsxs(qe$1.Root, { openDelay: 50, closeDelay: 100, onOpenChange: (w) => {
     f(w);
-  }, children: [jsx(We.Trigger, { onMouseMove: p, className: M("text-black dark:text-white", r), href: n, target: "_blank", rel: "noopener noreferrer", children: t }), jsx(We.Content, { className: "[transform-origin:var(--radix-hover-card-content-transform-origin)]", side: "top", align: "center", sideOffset: 10, children: jsx(AnimatePresence, { children: C && jsx(motion.div, { initial: { opacity: 0, y: 20, scale: 0.6 }, animate: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", stiffness: 260, damping: 20 } }, exit: { opacity: 0, y: 20, scale: 0.6 }, className: "shadow-xl rounded-xl", style: { x: d }, children: jsx(Link, { to: n, className: "block p-1 bg-white border-2 border-transparent shadow rounded-xl hover:border-neutral-200 dark:hover:border-neutral-800", style: { fontSize: 0 }, target: "_blank", rel: "noopener noreferrer", children: jsx("img", { src: l ? i : m, width: a, height: h, className: "rounded-lg", alt: "preview image" }) }) }) }) })] })] });
+  }, children: [jsx(qe$1.Trigger, { onMouseMove: p, className: M("text-black dark:text-white", r), href: n, target: "_blank", rel: "noopener noreferrer", children: t }), jsx(qe$1.Content, { className: "[transform-origin:var(--radix-hover-card-content-transform-origin)]", side: "top", align: "center", sideOffset: 10, children: jsx(AnimatePresence, { children: C && jsx(motion.div, { initial: { opacity: 0, y: 20, scale: 0.6 }, animate: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", stiffness: 260, damping: 20 } }, exit: { opacity: 0, y: 20, scale: 0.6 }, className: "shadow-xl rounded-xl", style: { x: d }, children: jsx(Link, { to: n, className: "block p-1 bg-white border-2 border-transparent shadow rounded-xl hover:border-neutral-200 dark:hover:border-neutral-800", style: { fontSize: 0 }, target: "_blank", rel: "noopener noreferrer", children: jsx("img", { src: l ? i : m, width: a, height: h, className: "rounded-lg", alt: "preview image" }) }) }) }) })] })] });
 }, yn = cva("flex gap-4 w-full", { variants: { variant: { default: "", bubble: "", full: "p-5" }, type: { incoming: "justify-start mr-auto", outgoing: "justify-end ml-auto" } }, compoundVariants: [{ variant: "full", type: "outgoing", className: "bg-muted" }, { variant: "full", type: "incoming", className: "bg-background" }], defaultVariants: { variant: "default", type: "incoming" } }), tt = F__default.createContext(null), nt = () => F__default.useContext(tt), we = F__default.forwardRef(({ className: t, variant: n = "default", type: r = "incoming", id: a, children: h, ...l }, i) => jsx(tt.Provider, { value: { variant: n, type: r, id: a }, children: jsx("div", { ref: i, className: M(yn({ variant: n, type: r, className: t })), ...l, children: h }) }));
 we.displayName = "ChatMessage";
 const wn = cva("w-8 h-8 flex items-center rounded-full justify-center ring-1 shrink-0 bg-transparent overflow-hidden", { variants: { type: { incoming: "ring-border", outgoing: "ring-muted-foreground/30" } }, defaultVariants: { type: "incoming" } }), Ne = F__default.forwardRef(({ className: t, icon: n, imageSrc: r, ...a }, h) => {
