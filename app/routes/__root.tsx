@@ -1,6 +1,5 @@
 import type { ReactNode } from 'react';
 import { Outlet, createRootRoute, HeadContent, Scripts } from '@tanstack/react-router';
-import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
 import { Provider as JotaiProvider } from 'jotai';
 
 import appCss from '~/styles/app.css?url';
