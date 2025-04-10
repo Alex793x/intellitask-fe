@@ -32,7 +32,7 @@ const vite: InlineConfig = {
     include: ['stream', 'stream/web', 'path', 'fs', 'async_hooks'], // Include Node.js built-in modules
   },
   build: {
-    assetsDir: 'dist/assets',
+    assetsDir: '.vercel/output/static/dist/assets',
     rollupOptions: {
       external: ['node:stream', 'node:stream/web', 'node:path', 'node:fs', 'node:async_hooks'], // Mark Node.js built-in modules as external
     },
@@ -42,10 +42,6 @@ const vite: InlineConfig = {
 export default defineConfig({
   server: {
     preset: 'vercel',
-    prerender: {
-      routes: ['/', '/sign-in', '/sign-up', '/forgot-password', '/_authed/_layout', '/_authed/_layout/members', '/_authed/_layout/organizations','/_authed/_layout/chat', '/verify-account', '/create-organization'],
-      crawlLinks: true
-    },
   },
   tsr: {
     appDirectory: 'app',
