@@ -41,7 +41,7 @@ const vite: InlineConfig = {
 
 export default defineConfig({
   server: {
-    preset: 'netlify',
+    preset: 'vercel',
     prerender: {
       routes: ['/', '/sign-in', '/sign-up', '/forgot-password', '/_authed/_layout', '/_authed/_layout/members', '/_authed/_layout/organizations','/_authed/_layout/chat', '/verify-account', '/create-organization'],
       crawlLinks: true
